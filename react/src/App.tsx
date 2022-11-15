@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './views/login/Index';
-import HomePage from './views/home-page/Index';
+import Areas from './views/areas/Index';
+import Homepage from './views/homepage/Index';
 import Patients from './views/patients/Index';
 import Users from './views/users/Index';
+import Visualisation from './views/visualisation/Index';
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/areas" element={<Areas />} />
           <Route path="/patients" element={<Patients />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/vis" element={<Visualisation />} />
         </Routes>
       </BrowserRouter>
     </div>
