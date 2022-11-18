@@ -31,10 +31,10 @@ export default function Users(params : {
             <DataGrid
                 rows={users !== undefined? users : []}
                 columns={[
-                    { field: 'name', headerName: 'User', width: 70 },
-                    { field: 'role', headerName: 'Role', width: 70 },
-                    { field: 'email', headerName: 'E-Mail', width: 70 },
-                    { field: 'admin', headerName: 'Admin?', width: 70 },
+                    { field: 'name', headerName: 'User', width: 200 },
+                    { field: 'role', headerName: 'Role', width: 200 },
+                    { field: 'email', headerName: 'E-Mail', width: 200 },
+                    { field: 'admin', headerName: 'Admin?', width: 200 },
                     {
                         field: 'options',
                         headerName: 'Options',

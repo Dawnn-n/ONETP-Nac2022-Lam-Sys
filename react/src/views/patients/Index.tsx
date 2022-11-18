@@ -58,18 +58,18 @@ export default function Patients(params : {
             <DataGrid
                 rows={patients !== undefined? patients : []}
                 columns={[
-                    { field: 'name', headerName: 'Patient'},
-                    { field: 'location', headerName: 'Location'},
-                    { field: 'nurse', headerName: 'Nurse'},
-                    { field: 'birthdate', headerName: 'Birthdate'},
-                    { field: 'vitalSigns', headerName: 'Vital signs' },
-                    { field: 'labValues', headerName: 'Lab values' },
-                    { field: 'assessments', headerName: 'Assessments' },
+                    { field: 'name', headerName: 'Patient', width: 100 },
+                    { field: 'location', headerName: 'Location', width: 100 },
+                    { field: 'nurse', headerName: 'Nurse', width: 100 },
+                    { field: 'birthdate', headerName: 'Birthdate', width: 100 },
+                    { field: 'vitalSigns', headerName: 'Vital signs', width: 100 },
+                    { field: 'labValues', headerName: 'Lab values', width: 100 },
+                    { field: 'assessments', headerName: 'Assessments', width: 100 },
                     {
                         field: 'options',
                         headerName: 'Options',
                         type: 'JSX.Element',
-                        width: 70
+                        width: 120
                     },
                 ]}
                 pageSize={5}

@@ -1,9 +1,10 @@
-import { FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
+import { FormControl, InputLabel, Select, MenuItem, Box, Paper, Accordion } from '@mui/material';
 import { child, ref } from 'firebase/database';
 import React, { useEffect, useState, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../firebase';
-import style from './style.module.css'
+import Chart from 'chart.js/auto';
+import style from './style.module.css';
 
 export default function Visualisation(params : {
 
@@ -36,27 +37,40 @@ export default function Visualisation(params : {
 
     return (
         <div className={style["vis-root"]}>
-            <Box sx={{
+            <Paper sx={{
                 flex: 1,
                 display: 'flex',
+                background: '#7ad6'
             }}>
-
-            </Box>
+                
+            </Paper>
             <Box sx={{
                 flex: 1,
                 display: 'flex',
             }}>
                 <FormControl fullWidth>
-                    <InputLabel>Filter by area</InputLabel>
-                    <Select
-                        value={areaFilter}
-                        label="Age"
-                        onChange={(e) => {setAreaFilter(e.target.value as number)}}
-                    >
-                        {areas?.map(e => <MenuItem value={e.name}>
-                            {e.name}
-                        </MenuItem>)}
-                    </Select>
+                    <Accordion>
+                        <InputLabel>Filter by area</InputLabel>
+                        <Select
+                            value={areaFilter}
+                            label="Age"
+                            onChange={(e) => {setAreaFilter(e.target.value as number)}}
+                            sx={{
+                                marginTop: '10vw',
+                                marginLeft: 'auto',
+                                marginRight: 'auto',
+                                width: '40vw',
+                            }}
+                        >
+                            {areas?.map(e => <MenuItem value={e.name}>
+                                {e.name}
+                            </MenuItem>)}
+                        </Select>
+                    </Accordion>
+                    <Accordion>
+                        <InputLabel>Filter by origin</InputLabel>
+                        
+                    </Accordion>
                 </FormControl>
             </Box>
         </div>
