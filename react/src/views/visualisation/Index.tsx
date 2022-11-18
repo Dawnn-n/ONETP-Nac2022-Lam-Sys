@@ -35,6 +35,7 @@ export default function Visualisation(params : {
         solvedAt: Date | null,
     }]>()
 
+    const chartElement = <canvas id="chart" />
     return (
         <div className={style["vis-root"]}>
             <Paper sx={{
@@ -42,7 +43,7 @@ export default function Visualisation(params : {
                 display: 'flex',
                 background: '#7ad6'
             }}>
-                
+                {chartElement}
             </Paper>
             <Box sx={{
                 flex: 1,

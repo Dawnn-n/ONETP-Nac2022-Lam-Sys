@@ -4,3 +4,9 @@
     display: flex;
     flex-direction: row;
 }
+
+#chart {
+    margin: auto;
+    width: 40vw;
+    height: 40vw;
+}
