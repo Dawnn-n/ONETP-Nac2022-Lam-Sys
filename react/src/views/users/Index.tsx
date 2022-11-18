@@ -15,9 +15,9 @@ export default function Users(params : {
         </IconButton>
     </div>
     const [users, setUsers] = useState<[{
-        name: '',
-        email: '',
-        role: '',
+        name: string,
+        email: string,
+        role: string,
         options: JSX.Element
     }]>()
     const usersRef = child(ref(db), 'users')

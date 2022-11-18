@@ -21,7 +21,7 @@ export default function Areas(params : {
         </IconButton>
     </div>
     const [areas, setAreas] = useState<[{
-        name: '',
+        name: string,
     }]>()
     const areasRef = child(ref(db), 'areas')
 
