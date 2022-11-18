@@ -32,8 +32,9 @@ export default function Users(params : {
                 rows={users !== undefined? users : []}
                 columns={[
                     { field: 'name', headerName: 'User', width: 70 },
-                    { field: 'email', headerName: 'E-Mail', width: 70 },
                     { field: 'role', headerName: 'Role', width: 70 },
+                    { field: 'email', headerName: 'E-Mail', width: 70 },
+                    { field: 'admin', headerName: 'Admin?', width: 70 },
                     {
                         field: 'options',
                         headerName: 'Options',
